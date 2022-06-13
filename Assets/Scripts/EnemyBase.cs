@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyBase : MonoBehaviour
 {
     public float speed;
-    public int maxLife;
-    
+    public float maxLife;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +16,12 @@ public class EnemyBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position += Vector3.left * speed * Time.deltaTime;
+    }
+
+    void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "Tower" || other.gameObject.tag == "Wall"){
+            speed = 0;
+        }
     }
 }

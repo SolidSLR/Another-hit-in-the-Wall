@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1471046075051955159}
   - component: {fileID: 1471046075051955158}
   - component: {fileID: 1471046075051955153}
-  m_Layer: 0
+  - component: {fileID: -2182388296879394885}
+  m_Layer: 6
   m_Name: EnemyWizard
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -120,4 +121,18 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.44
+--- !u!114 &-2182388296879394885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471046075051955152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69dc9191296ff849a3d9d27b48e4fc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  maxLife: 0
