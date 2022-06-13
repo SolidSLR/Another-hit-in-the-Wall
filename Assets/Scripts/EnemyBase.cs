@@ -25,4 +25,12 @@ public class EnemyBase : MonoBehaviour
             Debug.Log("Tower or wall hitted");
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.tag == "RangeAttackPos" && gameObject.tag == "EnemyWizard"){
+            speed = 0;
+            Debug.Log("I'm a wizard and I've reached the attack point");
+            // Empezar ataque a distancia.
+        }
+    }
 }

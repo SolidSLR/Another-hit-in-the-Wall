@@ -8,6 +8,8 @@ TagManager:
   - Tower
   - Enemy
   - Wall
+  - RangeAttackPos
+  - EnemyWizard
   layers:
   - Default
   - TransparentFX
