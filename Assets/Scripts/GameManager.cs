@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject enemyWeak;
     public GameObject enemyStrong;
     public GameObject enemyWizard;
+    private int rounds = 0;
     // Start is called before the first frame update
     void Start()
     {
