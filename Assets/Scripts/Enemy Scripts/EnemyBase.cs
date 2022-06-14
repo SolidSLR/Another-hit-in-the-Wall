@@ -23,6 +23,7 @@ public class EnemyBase : MonoBehaviour
         if(other.gameObject.tag == "Tower" || other.gameObject.tag == "Wall"){
             StartCoroutine("MeleeAttackCorout");
             Debug.Log("Tower or wall hitted");
+            Tower.instance.actualLife  -= 5;
         }
     }
     public IEnumerator MeleeAttackCorout(){
