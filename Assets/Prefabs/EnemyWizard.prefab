@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3735572114611648620}
   m_Layer: 6
   m_Name: EnemyWizard
-  m_TagString: EnemyWizard
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,3 +137,4 @@ MonoBehaviour:
   speed: 2
   maxLife: 0
   attackPower: 10
+  spellPrefab: {fileID: 1694861505722156499, guid: a860845a4ff4083459090296a7090842, type: 3}

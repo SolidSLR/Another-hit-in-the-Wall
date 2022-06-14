@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1694861504880090773}
   - component: {fileID: 1694861504880090772}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Isometric Diamond (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1694861505014497520}
   - component: {fileID: 1694861505014497527}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Isometric Diamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1694861505089178023}
   - component: {fileID: 1694861505089178022}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Isometric Diamond (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 1694861505722156498}
   - component: {fileID: 7313828363920876436}
   - component: {fileID: 4673770821508463277}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,22 +308,23 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.35524088, y: 0.34956986}
+    - - {x: 0.28952447, y: 0.12150282}
+      - {x: 0.3672752, y: 0.37062988}
       - {x: 0.120231755, y: 0.2780238}
-      - {x: -0.0047481144, y: 0.506196}
+      - {x: -0.0017395439, y: 0.52123886}
       - {x: -0.11815564, y: 0.27918375}
-      - {x: -0.36018777, y: 0.362136}
-      - {x: -0.27867863, y: 0.12162778}
-      - {x: -0.4999857, y: 0.005137671}
-      - {x: -0.27189168, y: -0.117409095}
-      - {x: -0.35568684, y: -0.3521623}
-      - {x: -0.11297372, y: -0.27722833}
-      - {x: 0.006172566, y: -0.5051377}
-      - {x: 0.11349724, y: -0.27045783}
-      - {x: 0.35512772, y: -0.3579461}
-      - {x: 0.2788975, y: -0.10768914}
-      - {x: 0.49497068, y: -0.006295759}
-      - {x: 0.27682424, y: 0.11434442}
+      - {x: -0.36620492, y: 0.36514458}
+      - {x: -0.28168717, y: 0.12162778}
+      - {x: -0.5150286, y: -0.0008794712}
+      - {x: -0.28091744, y: -0.117409095}
+      - {x: -0.37072968, y: -0.3732223}
+      - {x: -0.11899086, y: -0.28324547}
+      - {x: 0.00015542284, y: -0.5231891}
+      - {x: 0.11349724, y: -0.27948353}
+      - {x: 0.37317914, y: -0.3699804}
+      - {x: 0.28491464, y: -0.113706276}
+      - {x: 0.528065, y: -0.00027861632}
+      - {x: 0.27682424, y: 0.12036156}
 --- !u!50 &7313828363920876436
 Rigidbody2D:
   serializedVersion: 4
@@ -336,10 +337,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -357,6 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce95162bbf0b34242a928777e185e657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 6
 --- !u!1 &1694861506504803829
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1694861506504803828}
   - component: {fileID: 1694861506504803835}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Isometric Diamond (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

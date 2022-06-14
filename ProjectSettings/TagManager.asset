@@ -9,7 +9,6 @@ TagManager:
   - Enemy
   - Wall
   - RangeAttackPos
-  - EnemyWizard
   layers:
   - Default
   - TransparentFX
@@ -20,7 +19,7 @@ TagManager:
   - Enemy
   - Tower
   - Wall
-  - 
+  - EnemyBullet
   - 
   - 
   - 
