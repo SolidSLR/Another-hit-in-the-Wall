@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBase : MonoBehaviour
+public class EnemyWizard : EnemyBase
 {
-    public float speed;
-    public float maxLife;
-
+    public int attackPower;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +14,7 @@ public class EnemyBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.left * speed * Time.deltaTime;
-    }
-
-    void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag == "Tower" || other.gameObject.tag == "Wall"){
-            speed = 0;
-            Debug.Log("Tower or wall hitted");
-        }
+        
     }
 
     void OnTriggerEnter2D(Collider2D other){

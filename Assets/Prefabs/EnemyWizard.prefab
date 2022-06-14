@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1471046075051955159}
   - component: {fileID: 1471046075051955158}
   - component: {fileID: 1471046075051955153}
-  - component: {fileID: -2182388296879394885}
+  - component: {fileID: -3735572114611648620}
   m_Layer: 6
   m_Name: EnemyWizard
   m_TagString: EnemyWizard
@@ -122,7 +122,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.44
---- !u!114 &-2182388296879394885
+--- !u!114 &-3735572114611648620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,8 +131,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1471046075051955152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f69dc9191296ff849a3d9d27b48e4fc8, type: 3}
+  m_Script: {fileID: 11500000, guid: 9030a9f76020bf54ea4486d3e268ed38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
   maxLife: 0
+  attackPower: 10
