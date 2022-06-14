@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    // Vida máxima. 
     public int maxLife = 500;
     public int actualLife;
     public static Tower instance;
@@ -22,8 +21,6 @@ public class Tower : MonoBehaviour
         Debug.Log("Vida actual "+actualLife);
     }
     void OnCollisionEnter2D(Collision2D other){
-        if(other.gameObject.tag == "Enemy"){
-            Debug.Log("Hitted by enemy");
-        }
+        // Usar para ejecutar animación de sacudida
     }
 }
