@@ -22,7 +22,6 @@ public class EnemyBase : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "Tower" || other.gameObject.tag == "Wall"){
             StartCoroutine("MeleeAttackCorout");
-            Debug.Log("Tower or wall hitted");
             Tower.instance.actualLife  -= 5;
         }
     }

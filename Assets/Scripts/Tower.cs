@@ -18,7 +18,7 @@ public class Tower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Vida actual "+actualLife);
+        
     }
     void OnCollisionEnter2D(Collision2D other){
         // Usar para ejecutar animación de sacudida
