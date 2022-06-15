@@ -542,7 +542,8 @@ MonoBehaviour:
   enemyWeak: {fileID: 8600234761642381027, guid: 3239a4b1a8b2c8448a88628974e06825, type: 3}
   enemyStrong: {fileID: 4927561188058067566, guid: 5a673a0773e301049860e3c08bc26bae, type: 3}
   enemyWizard: {fileID: 1471046075051955152, guid: 260578cfb91c9284487a8e744e463f90, type: 3}
-  rounds: 9
+  canSpawn: 1
+  rounds: 3
 --- !u!4 &1115497991
 Transform:
   m_ObjectHideFlags: 0

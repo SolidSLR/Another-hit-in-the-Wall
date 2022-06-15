@@ -10,20 +10,33 @@ public class GameManager : MonoBehaviour
     public GameObject enemyWeak;
     public GameObject enemyStrong;
     public GameObject enemyWizard;
+    public bool canSpawn;
     private List<GameObject> enemiesOnScreen;
-    public int rounds = 0;
+    // Incrementar rondas al hacer click en "Continuar" en el UI
+    public int rounds = 1;
     // Start is called before the first frame update
     void Start()
     {
+        canSpawn = true;
         enemiesOnScreen = new List<GameObject>();
         StartCoroutine("SpawnEnemiesCorout");
     }
     // Update is called once per frame
     void Update()
     {
-        
+        if(Tower.instance.actualLife == 0){
+            Time.timeScale = 0;
+            // Lanzar GameOver
+        }
+
+        if(enemiesOnScreen.Count == 0 && !canSpawn){
+            // Lanzar UI
+            Time.timeScale = 0;
+        }
     }
+    // Llamar a la corrutina al hacer click en "Continuar" en el UI
     private IEnumerator SpawnEnemiesCorout(){
+        Debug.Log("Entro en corrutina");
         if(rounds == 1){
             yield return new WaitForSeconds(1f);
             enemiesOnScreen.Add(Instantiate(enemyWeak, spawnPoint));
@@ -33,7 +46,9 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
             enemiesOnScreen.Add(Instantiate(enemyWeak, spawnPoint));
         }else if(rounds == 3){
+            Debug.Log("Deberían empezar a salir bichos");
             yield return new WaitForSeconds(1f);
+            Debug.Log("Debería salir un enemigo débil");
             enemiesOnScreen.Add(Instantiate(enemyWeak, spawnPoint));
             yield return new WaitForSeconds(1f);
             enemiesOnScreen.Add(Instantiate(enemyWeak, spawnPoint));
@@ -65,5 +80,6 @@ public class GameManager : MonoBehaviour
                 x++;
             }
         }
+        canSpawn = false;
     }
 }
