@@ -868,6 +868,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 500
   actualLife: 0
+  arrow: {fileID: 8165337584974528748, guid: e7744c4992bb0314c801b230c22a40bc, type: 3}
+  arrowSpawn: {fileID: 1852205060}
 --- !u!1 &228629299
 GameObject:
   m_ObjectHideFlags: 0
