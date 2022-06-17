@@ -22,7 +22,10 @@ public class Tower : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other){
         // Código temporal para comprobar que se lanza la UI
-        Destroy(other.gameObject);
+        if(other.gameObject.tag == "Enemy"){
+            GameManager.instance.enemiesOnScreen.Remove(other.gameObject);
+            Destroy(other.gameObject);
+        }
         // Usar para ejecutar animación de sacudida
     }
 }

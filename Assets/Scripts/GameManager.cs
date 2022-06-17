@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject ui;
     public static GameManager instance;
     public bool canSpawn;
-    private List<GameObject> enemiesOnScreen;
+    public List<GameObject> enemiesOnScreen;
     // Incrementar rondas al hacer click en "Continuar" en el UI
     public int rounds = 1;
     void Awake(){
@@ -30,21 +30,16 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        StartCoroutine("CheckForUI");
         if(Tower.instance.actualLife == 0){
             Debug.Log("Torre KO: "+Tower.instance.actualLife);
             Time.timeScale = 0;
             // Lanzar GameOver
         }
-
-        if(enemiesOnScreen.Count == 0 && !canSpawn){
-            // Lanzar UI
-            ui.SetActive(true);
-            Time.timeScale = 0;
-        }
+        Debug.Log("Valor de rounds "+rounds+" Valor de canSpawn: "+canSpawn+" Enemigos en lista "+enemiesOnScreen.Count);
     }
     // Llamar a la corrutina al hacer click en "Continuar" en el UI
     private IEnumerator SpawnEnemiesCorout(){
-        Debug.Log("Entro en corrutina");
         if(rounds == 1){
             yield return new WaitForSeconds(1f);
             enemiesOnScreen.Add(Instantiate(enemyWeak, spawnPoint));
@@ -54,9 +49,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
             enemiesOnScreen.Add(Instantiate(enemyWeak, spawnPoint));
         }else if(rounds == 3){
-            Debug.Log("Deberían empezar a salir bichos");
             yield return new WaitForSeconds(1f);
-            Debug.Log("Debería salir un enemigo débil");
             enemiesOnScreen.Add(Instantiate(enemyWeak, spawnPoint));
             yield return new WaitForSeconds(1f);
             enemiesOnScreen.Add(Instantiate(enemyWeak, spawnPoint));
@@ -88,8 +81,20 @@ public class GameManager : MonoBehaviour
                 x++;
             }
         }
+        canSpawn = false;
+    }
+    private IEnumerator CheckForUI(){
+        yield return new WaitForSeconds(1.5f);
+        if(enemiesOnScreen.Count == 0 && !canSpawn){
+            // Lanzar UI
+            ui.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
     public void ResumeGame(){
+        canSpawn = true;
+        ui.SetActive(false);
+        StartCoroutine("SpawnEnemiesCorout");
         Time.timeScale = 1;
     }
 }

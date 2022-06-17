@@ -983,7 +983,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 718784270}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 842671242}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: ContinueOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &718784270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1300,8 +1312,10 @@ MonoBehaviour:
   enemyWeak: {fileID: 8600234761642381027, guid: 3239a4b1a8b2c8448a88628974e06825, type: 3}
   enemyStrong: {fileID: 4927561188058067566, guid: 5a673a0773e301049860e3c08bc26bae, type: 3}
   enemyWizard: {fileID: 1471046075051955152, guid: 260578cfb91c9284487a8e744e463f90, type: 3}
+  ui: {fileID: 842671237}
   canSpawn: 1
-  rounds: 3
+  enemiesOnScreen: []
+  rounds: 1
 --- !u!4 &1115497991
 Transform:
   m_ObjectHideFlags: 0
