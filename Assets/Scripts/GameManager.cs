@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject enemyStrong;
     public GameObject enemyWizard;
     public GameObject betweenRoundsUI;
+    public GameObject pauseUI;
     public static GameManager instance;
     public bool canSpawn;
     public List<GameObject> enemiesOnScreen;
@@ -88,16 +89,21 @@ public class GameManager : MonoBehaviour
         if(enemiesOnScreen.Count == 0 && !canSpawn){
             // Lanzar UI
             betweenRoundsUI.SetActive(true);
+            pauseUI.SetActive(false);
             Time.timeScale = 0;
         }
     }
-    public void ResumeGame(){
+    public void NextRound(){
         canSpawn = true;
         betweenRoundsUI.SetActive(false);
+        pauseUI.SetActive(true);
         StartCoroutine("SpawnEnemiesCorout");
         Time.timeScale = 1;
     }
     public void PauseGame(){
         Time.timeScale = 0;
+    }
+    public void ResumeGame(){
+        Time.timeScale = 1;
     }
 }
