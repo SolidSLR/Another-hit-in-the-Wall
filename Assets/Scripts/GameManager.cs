@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject enemyWeak;
     public GameObject enemyStrong;
     public GameObject enemyWizard;
-    public GameObject ui;
+    public GameObject betweenRoundsUI;
     public static GameManager instance;
     public bool canSpawn;
     public List<GameObject> enemiesOnScreen;
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ui.SetActive(false);
+        betweenRoundsUI.SetActive(false);
         canSpawn = true;
         enemiesOnScreen = new List<GameObject>();
         StartCoroutine("SpawnEnemiesCorout");
@@ -87,14 +87,17 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         if(enemiesOnScreen.Count == 0 && !canSpawn){
             // Lanzar UI
-            ui.SetActive(true);
+            betweenRoundsUI.SetActive(true);
             Time.timeScale = 0;
         }
     }
     public void ResumeGame(){
         canSpawn = true;
-        ui.SetActive(false);
+        betweenRoundsUI.SetActive(false);
         StartCoroutine("SpawnEnemiesCorout");
         Time.timeScale = 1;
+    }
+    public void PauseGame(){
+        Time.timeScale = 0;
     }
 }

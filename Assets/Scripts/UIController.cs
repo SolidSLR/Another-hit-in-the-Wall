@@ -20,4 +20,7 @@ public class UIController : MonoBehaviour
         GameManager.instance.rounds++;
         GameManager.instance.ResumeGame();
     }
+    public void PauseOnClick(){
+        GameManager.instance.PauseGame();
+    }
 }
