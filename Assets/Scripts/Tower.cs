@@ -21,6 +21,8 @@ public class Tower : MonoBehaviour
         
     }
     void OnCollisionEnter2D(Collision2D other){
+        // Código temporal para comprobar que se lanza la UI
+        Destroy(other.gameObject);
         // Usar para ejecutar animación de sacudida
     }
 }

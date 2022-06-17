@@ -10,13 +10,19 @@ public class GameManager : MonoBehaviour
     public GameObject enemyWeak;
     public GameObject enemyStrong;
     public GameObject enemyWizard;
+    public GameObject ui;
+    public static GameManager instance;
     public bool canSpawn;
     private List<GameObject> enemiesOnScreen;
     // Incrementar rondas al hacer click en "Continuar" en el UI
     public int rounds = 1;
+    void Awake(){
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
+        ui.SetActive(false);
         canSpawn = true;
         enemiesOnScreen = new List<GameObject>();
         StartCoroutine("SpawnEnemiesCorout");
@@ -25,12 +31,14 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if(Tower.instance.actualLife == 0){
+            Debug.Log("Torre KO: "+Tower.instance.actualLife);
             Time.timeScale = 0;
             // Lanzar GameOver
         }
 
         if(enemiesOnScreen.Count == 0 && !canSpawn){
             // Lanzar UI
+            ui.SetActive(true);
             Time.timeScale = 0;
         }
     }
@@ -80,6 +88,8 @@ public class GameManager : MonoBehaviour
                 x++;
             }
         }
-        canSpawn = false;
+    }
+    public void ResumeGame(){
+        Time.timeScale = 1;
     }
 }
