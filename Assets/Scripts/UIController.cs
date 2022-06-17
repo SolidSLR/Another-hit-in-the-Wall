@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
@@ -23,5 +24,9 @@ public class UIController : MonoBehaviour
         GameManager.instance.ResumeGame();
         pauseUI.SetActive(true);
         resumeUI.SetActive(false);
+    }
+    public void RestartOnClick(){
+        SceneManager.LoadScene("MainScene");
+        // Revisar por qué no vuelven a salir bichos
     }
 }
