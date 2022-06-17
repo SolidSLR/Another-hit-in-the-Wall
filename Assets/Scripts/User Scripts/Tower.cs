@@ -7,6 +7,8 @@ public class Tower : MonoBehaviour
     public int maxLife = 500;
     public int actualLife;
     public static Tower instance;
+    public GameObject arrow;
+    public Transform arrowSpawn;
     // Start is called before the first frame update
     void Awake(){
         instance = this;
@@ -14,6 +16,7 @@ public class Tower : MonoBehaviour
     void Start()
     {
         actualLife = maxLife;
+        StartCoroutine("SpawnShot");
     }
     // Update is called once per frame
     void Update()
@@ -27,5 +30,13 @@ public class Tower : MonoBehaviour
             Destroy(other.gameObject);
         }
         // Usar para ejecutar animación de sacudida
+    }
+    public IEnumerator SpawnShot(){
+        // Código temporal para pruebas
+        while(true){
+            yield return new WaitForSeconds(0.5f);
+            GameObject newArrow = Instantiate(arrow, arrowSpawn.position, Quaternion.identity);
+            newArrow.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 5f, ForceMode2D.Impulse);
+        }
     }
 }
