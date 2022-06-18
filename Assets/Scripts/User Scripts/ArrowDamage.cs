@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class ArrowDamage : MonoBehaviour
 {
-    public int damage = 0;
+    public int damage = 5;
     Arrow arrow;
+    public static ArrowDamage instance;
+    void Awake(){
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {

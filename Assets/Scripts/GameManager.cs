@@ -109,4 +109,10 @@ public class GameManager : MonoBehaviour
         Tower.instance.maxLife += 50;
         Tower.instance.actualLife = Tower.instance.maxLife;
     }
+    public void UpgradeArrowAD(){
+        ArrowDamage.instance.damage += 10;
+    }
+    public void AddShot(){
+        Debug.Log("Se añadirá una flecha por disparo");
+    }
 }

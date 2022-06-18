@@ -34,9 +34,11 @@ public class UIController : MonoBehaviour
         Debug.Log("Incrementar vida de torre");
     }
     public void PlusAdOnClick(){
+        GameManager.instance.UpgradeArrowAD();
         Debug.Log("Incrementar daño de flechas");
     }
     public void PlusArrowPerShot(){
+        GameManager.instance.AddShot();
         Debug.Log("Añadir una flecha más por disparo");
     }
 }
