@@ -29,4 +29,13 @@ public class UIController : MonoBehaviour
         SceneManager.LoadScene("MainScene");
         // Revisar por qué no vuelven a salir bichos
     }
+    public void PlusLifeOnClic(){
+        Debug.Log("Incrementar vida de torre");
+    }
+    public void PlusAdOnClick(){
+        Debug.Log("Incrementar daño de flechas");
+    }
+    public void PlusArrowPerShot(){
+        Debug.Log("Añadir una flecha más por disparo");
+    }
 }

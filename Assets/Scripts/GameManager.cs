@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             // Lanzar GameOver
         }
-        Debug.Log("Valor de rounds "+rounds+" Valor de canSpawn: "+canSpawn+" Enemigos en lista "+enemiesOnScreen.Count);
     }
     // Llamar a la corrutina al hacer click en "Continuar" en el UI
     private IEnumerator SpawnEnemiesCorout(){
