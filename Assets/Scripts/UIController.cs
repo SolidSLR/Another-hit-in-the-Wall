@@ -30,6 +30,7 @@ public class UIController : MonoBehaviour
         // Revisar por qué no vuelven a salir bichos
     }
     public void PlusLifeOnClic(){
+        GameManager.instance.UpgradeTowerLife();
         Debug.Log("Incrementar vida de torre");
     }
     public void PlusAdOnClick(){

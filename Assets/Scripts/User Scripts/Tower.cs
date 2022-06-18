@@ -21,7 +21,7 @@ public class Tower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("Vida actual: "+actualLife+" Vida máxima: "+maxLife);
     }
     void OnCollisionEnter2D(Collision2D other){
         // Código temporal para comprobar que se lanza la UI

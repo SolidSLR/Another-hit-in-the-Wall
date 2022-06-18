@@ -105,4 +105,8 @@ public class GameManager : MonoBehaviour
     public void ResumeGame(){
         Time.timeScale = 1;
     }
+    public void UpgradeTowerLife(){
+        Tower.instance.maxLife += 50;
+        Tower.instance.actualLife = Tower.instance.maxLife;
+    }
 }
