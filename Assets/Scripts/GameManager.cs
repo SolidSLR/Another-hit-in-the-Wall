@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             // Lanzar GameOver
         }
+        Debug.Log("Valor actual de canSpawn: "+canSpawn+" Cantidad de enemigos en pantalla: "+enemiesOnScreen.Count);
     }
     // Llamar a la corrutina al hacer click en "Continuar" en el UI
     private IEnumerator SpawnEnemiesCorout(){

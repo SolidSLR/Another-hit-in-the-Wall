@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyBase : MonoBehaviour
 {
     public float speed;
-    public float maxLife;
-
+    public float life;
+    public int attackPower;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +17,17 @@ public class EnemyBase : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.left * speed * Time.deltaTime;
+        if(life<=0){
+            GameManager.instance.enemiesOnScreen.Remove(gameObject);
+            Destroy(gameObject);
+        }
+        //Debug.Log("Vida actual: "+life);
     }
 
     void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "Tower" || other.gameObject.tag == "Wall"){
             StartCoroutine("MeleeAttackCorout");
-            Tower.instance.actualLife  -= 5;
+            Tower.instance.actualLife  -= attackPower;
         }
     }
     public IEnumerator MeleeAttackCorout(){

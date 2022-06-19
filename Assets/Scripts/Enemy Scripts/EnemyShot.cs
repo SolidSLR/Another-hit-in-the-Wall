@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyShot : MonoBehaviour
 {
+    public float attackPower;
     public float speed;
     private Rigidbody2D rb;
     // Start is called before the first frame update

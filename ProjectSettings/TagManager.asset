@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Wall
   - RangeAttackPos
+  - ArrowPoint
   layers:
   - Default
   - TransparentFX

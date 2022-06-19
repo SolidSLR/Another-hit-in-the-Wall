@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyWizard : EnemyBase
 {
-    public int attackPower;
     public GameObject spellPrefab;
     private bool canShoot = false;
     // Start is called before the first frame update
