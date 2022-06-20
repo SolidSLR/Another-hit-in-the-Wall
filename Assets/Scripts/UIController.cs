@@ -18,6 +18,7 @@ public class UIController : MonoBehaviour
         resumeUI.SetActive(false);
     }
     public void ContinueOnClick(){
+        maxWalls = 0;
         GameManager.instance.rounds++;
         plusLifeButton.GetComponent<Button>().interactable = true;
         plusADButton.GetComponent<Button>().interactable = true;

@@ -14,7 +14,7 @@ public class Wall : MonoBehaviour
     void Update()
     {
        if(life<=0){
-        Destroy(gameObject);
+        Destroy(this.gameObject);
        } 
     }
 }
