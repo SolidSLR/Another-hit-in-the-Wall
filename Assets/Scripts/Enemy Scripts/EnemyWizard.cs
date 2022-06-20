@@ -6,9 +6,11 @@ public class EnemyWizard : EnemyBase
 {
     public GameObject spellPrefab;
     private bool canShoot = false;
+    private float normalSpeed;
     // Start is called before the first frame update
     void Start()
     {
+        normalSpeed = speed;
         transform.parent = null;
     }
 
@@ -26,7 +28,10 @@ public class EnemyWizard : EnemyBase
             // Empezar ataque a distancia.
         }
     }
-
+    void OnTriggerExit2D(Collider2D other) {
+        speed = normalSpeed;
+        canShoot = false;
+    }
     private IEnumerator EnemyStartShooting(){
         while (canShoot){
             yield return new WaitForSeconds(0.75f);

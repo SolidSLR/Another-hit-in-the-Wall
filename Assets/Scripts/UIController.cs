@@ -46,19 +46,16 @@ public class UIController : MonoBehaviour
         GameManager.instance.UpgradeTowerLife();
         ChangeDisabledColor(plusLifeButton, "#5FFF6E");
         DisableUpgradeUI();
-        //Debug.Log("Incrementar vida de torre");
     }
     public void PlusADOnClick(){
         GameManager.instance.UpgradeArrowAD();
         ChangeDisabledColor(plusADButton, "#5FFF6E");
         DisableUpgradeUI();
-        //Debug.Log("Incrementar daño de flechas");
     }
     public void PlusArrowPerShot(){
         GameManager.instance.AddShot();
         ChangeDisabledColor(plusArrowButton, "#5FFF6E");
         DisableUpgradeUI();
-        //Debug.Log("Añadir una flecha más por disparo");
     }
     public void DisableUpgradeUI(){
         Debug.Log("Se inhabilitarán los botones de mejora");
