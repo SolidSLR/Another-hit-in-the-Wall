@@ -20,6 +20,9 @@ public class UIController : MonoBehaviour
         plusLifeButton.GetComponent<Button>().interactable = true;
         plusADButton.GetComponent<Button>().interactable = true;
         plusArrowButton.GetComponent<Button>().interactable = true;
+        ChangeDisabledColor(plusLifeButton, "#C8C8C8");
+        ChangeDisabledColor(plusADButton, "#C8C8C8");
+        ChangeDisabledColor(plusArrowButton, "#C8C8C8");
         GameManager.instance.NextRound();
     }
     public void PauseOnClick(){
@@ -41,19 +44,19 @@ public class UIController : MonoBehaviour
     }
     public void PlusLifeOnClic(){
         GameManager.instance.UpgradeTowerLife();
-        ChangeDisabledColor(plusLifeButton);
+        ChangeDisabledColor(plusLifeButton, "#5FFF6E");
         DisableUpgradeUI();
         //Debug.Log("Incrementar vida de torre");
     }
     public void PlusADOnClick(){
         GameManager.instance.UpgradeArrowAD();
-        ChangeDisabledColor(plusADButton);
+        ChangeDisabledColor(plusADButton, "#5FFF6E");
         DisableUpgradeUI();
         //Debug.Log("Incrementar daño de flechas");
     }
     public void PlusArrowPerShot(){
         GameManager.instance.AddShot();
-        ChangeDisabledColor(plusArrowButton);
+        ChangeDisabledColor(plusArrowButton, "#5FFF6E");
         DisableUpgradeUI();
         //Debug.Log("Añadir una flecha más por disparo");
     }
@@ -64,9 +67,9 @@ public class UIController : MonoBehaviour
         plusADButton.GetComponent<Button>().interactable = false;
         plusArrowButton.GetComponent<Button>().interactable = false;
     }
-    public void ChangeDisabledColor(GameObject button){
+    public void ChangeDisabledColor(GameObject button, string newcolor){
         Color color;
-        ColorUtility.TryParseHtmlString("#5FFF6E", out color);
+        ColorUtility.TryParseHtmlString(newcolor, out color);
         ColorBlock disabledColor = button.GetComponent<Button>().colors;
         disabledColor.disabledColor = color;
         button.GetComponent<Button>().colors = disabledColor;

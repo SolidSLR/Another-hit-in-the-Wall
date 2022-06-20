@@ -2615,7 +2615,7 @@ MonoBehaviour:
   pauseUI: {fileID: 239402041}
   canSpawn: 1
   enemiesOnScreen: []
-  rounds: 4
+  rounds: 1
 --- !u!4 &1115497991
 Transform:
   m_ObjectHideFlags: 0
