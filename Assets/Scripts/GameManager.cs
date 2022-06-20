@@ -10,11 +10,13 @@ public class GameManager : MonoBehaviour
     public GameObject enemyWeak;
     public GameObject enemyStrong;
     public GameObject enemyWizard;
+    public GameObject wallPrefab;
     public GameObject betweenRoundsUI;
     public GameObject pauseUI;
     public static GameManager instance;
     public bool canSpawn;
     public List<GameObject> enemiesOnScreen;
+    public List<GameObject> wallSpawnPoint;
     // Incrementar rondas al hacer click en "Continuar" en el UI
     public int rounds = 1;
     void Awake(){
@@ -115,5 +117,9 @@ public class GameManager : MonoBehaviour
     }
     public void AddShot(){
         Debug.Log("Se añadirá una flecha por disparo");
+    }
+    public void SpawnWall(){
+        int random = Random.Range(0,5);
+        Instantiate(wallPrefab, wallSpawnPoint[random].transform.position, Quaternion.identity);
     }
 }

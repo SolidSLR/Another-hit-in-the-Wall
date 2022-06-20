@@ -11,6 +11,8 @@ public class UIController : MonoBehaviour
     public GameObject plusLifeButton;
     public GameObject plusADButton;
     public GameObject plusArrowButton;
+    public GameObject spawnWalls;
+    private int maxWalls = 0;
     void Start(){
         pauseUI.SetActive(true);
         resumeUI.SetActive(false);
@@ -20,6 +22,7 @@ public class UIController : MonoBehaviour
         plusLifeButton.GetComponent<Button>().interactable = true;
         plusADButton.GetComponent<Button>().interactable = true;
         plusArrowButton.GetComponent<Button>().interactable = true;
+        spawnWalls.GetComponent<Button>().interactable = true;
         ChangeDisabledColor(plusLifeButton, "#C8C8C8");
         ChangeDisabledColor(plusADButton, "#C8C8C8");
         ChangeDisabledColor(plusArrowButton, "#C8C8C8");
@@ -57,9 +60,16 @@ public class UIController : MonoBehaviour
         ChangeDisabledColor(plusArrowButton, "#5FFF6E");
         DisableUpgradeUI();
     }
+    public void SpawnWall(){
+        GameManager.instance.SpawnWall();
+        maxWalls++;
+        Debug.Log("Murallas puestas: "+maxWalls);
+        if(maxWalls==3){
+            Debug.Log("No deberían aparecer más murallas");
+            spawnWalls.GetComponent<Button>().interactable = false;
+        }
+    }
     public void DisableUpgradeUI(){
-        Debug.Log("Se inhabilitarán los botones de mejora");
-
         plusLifeButton.GetComponent<Button>().interactable = false;
         plusADButton.GetComponent<Button>().interactable = false;
         plusArrowButton.GetComponent<Button>().interactable = false;

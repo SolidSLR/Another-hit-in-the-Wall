@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8165337584974528746}
   - component: {fileID: 8165337584974528749}
   - component: {fileID: -3067332334063289407}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 8165337585749333444}
   - component: {fileID: 8165337585749333447}
   - component: {fileID: 540278895853715658}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ArrowPoint
   m_TagString: ArrowPoint
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8165337586072274601}
   - component: {fileID: 8165337586072274614}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ArrowBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
