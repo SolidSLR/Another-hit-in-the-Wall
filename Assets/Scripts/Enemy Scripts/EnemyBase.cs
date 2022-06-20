@@ -25,9 +25,14 @@ public class EnemyBase : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag == "Tower" || other.gameObject.tag == "Wall"){
+        if(other.gameObject.tag == "Tower"){
             StartCoroutine("MeleeAttackCorout");
             Tower.instance.actualLife  -= attackPower;
+        }
+
+        if(other.gameObject.tag == "Wall"){
+            StartCoroutine("MeleeAttackCorout");
+            Wall.instance.life  -= attackPower;
         }
     }
     public IEnumerator MeleeAttackCorout(){
