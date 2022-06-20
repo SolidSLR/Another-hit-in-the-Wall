@@ -938,7 +938,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.37254903, g: 1, b: 0.43137255, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -962,7 +962,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 842671242}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: PlusAdOnClick
+        m_MethodName: PlusADOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1660,7 +1660,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.37254903, g: 1, b: 0.43137255, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2047,7 +2047,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.37254903, g: 1, b: 0.43137255, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2369,6 +2369,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseUI: {fileID: 239402041}
   resumeUI: {fileID: 496217822}
+  plusLifeButton: {fileID: 476851804}
+  plusADButton: {fileID: 205740214}
+  plusArrowButton: {fileID: 618902705}
 --- !u!1 &1003525353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2612,7 +2615,7 @@ MonoBehaviour:
   pauseUI: {fileID: 239402041}
   canSpawn: 1
   enemiesOnScreen: []
-  rounds: 1
+  rounds: 4
 --- !u!4 &1115497991
 Transform:
   m_ObjectHideFlags: 0
@@ -3176,7 +3179,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1468847756}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 842671242}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: MenuOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1468847756
 MonoBehaviour:
   m_ObjectHideFlags: 0

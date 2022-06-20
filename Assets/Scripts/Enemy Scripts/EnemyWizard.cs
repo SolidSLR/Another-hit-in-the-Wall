@@ -29,8 +29,9 @@ public class EnemyWizard : EnemyBase
 
     private IEnumerator EnemyStartShooting(){
         while (canShoot){
-            yield return new WaitForSeconds(1.5f);
-            Instantiate(spellPrefab, transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.75f);
+            Vector2 spellSpawnPos = new Vector2(transform.position.x-0.5f, transform.position.y);
+            Instantiate(spellPrefab, spellSpawnPos, Quaternion.identity);
         }
     }
 }
