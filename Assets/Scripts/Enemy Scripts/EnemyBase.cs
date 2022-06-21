@@ -21,7 +21,6 @@ public class EnemyBase : MonoBehaviour
             GameManager.instance.enemiesOnScreen.Remove(gameObject);
             Destroy(gameObject);
         }
-        //Debug.Log("Vida actual: "+life);
     }
 
     void OnCollisionEnter2D(Collision2D other) {

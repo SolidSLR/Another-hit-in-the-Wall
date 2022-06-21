@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyShot : MonoBehaviour
 {
-    public float attackPower;
+    public int attackPower;
     public float speed;
     private Rigidbody2D rb;
     // Start is called before the first frame update
@@ -22,6 +22,12 @@ public class EnemyShot : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other){
+        if(other.gameObject.tag == "Tower"){
+            Tower.instance.actualLife -= attackPower;
+        }
+        if(other.gameObject.tag == "Wall"){
+            other.gameObject.GetComponent<Wall>().life -= attackPower;
+        }
         if(other.gameObject.tag == "Tower" || other.gameObject.tag == "Wall"){
             Destroy(gameObject);
         }

@@ -22,7 +22,9 @@ public class EnemyWizard : EnemyBase
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "RangeAttackPos"){
-            canShoot = true;
+            if(!canShoot){
+                canShoot = true;
+            }
             speed = 0;
             StartCoroutine("EnemyStartShooting");
             // Empezar ataque a distancia.
