@@ -32,7 +32,7 @@ public class EnemyBase : MonoBehaviour
 
         if(other.gameObject.tag == "Wall"){
             StartCoroutine("MeleeAttackCorout");
-            Wall.instance.life  -= attackPower;
+            other.gameObject.GetComponent<Wall>().life -= attackPower;
         }
     }
     public IEnumerator MeleeAttackCorout(){

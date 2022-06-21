@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
-    public static Wall instance;
     public int life;
-    void Awake(){
-        instance = this;
-    }
 
     // Update is called once per frame
     void Update()
     {
        if(life<=0){
-        Destroy(this.gameObject);
+            Destroy(this.gameObject);
        } 
     }
 }
