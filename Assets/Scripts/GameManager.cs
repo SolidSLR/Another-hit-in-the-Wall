@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -121,5 +122,8 @@ public class GameManager : MonoBehaviour
     public void SpawnWall(){
         int random = Random.Range(0,5);
         Instantiate(wallPrefab, wallSpawnPoint[random].transform.position, Quaternion.identity);
+    }
+    public void GameOver(){
+        SceneManager.LoadScene("GameOver");
     }
 }
