@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MenuUI : MonoBehaviour
 {
+    public GameObject principalUI;
+    public GameObject infoUI;
+    void Start(){
+        principalUI.SetActive(true);
+        infoUI.SetActive(false);
+    }
     public void StartOnClick(){
         SceneManager.LoadScene("MainScene");
     }
@@ -13,5 +19,11 @@ public class MenuUI : MonoBehaviour
     }
     public void GameInfoOnClick(){
         Debug.Log("Se carga info de juego");
+        principalUI.SetActive(false);
+        infoUI.SetActive(true);
+    }
+    public void ExitInfoUI(){
+        principalUI.SetActive(true);
+        infoUI.SetActive(false);
     }
 }
