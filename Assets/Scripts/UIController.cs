@@ -49,6 +49,7 @@ public class UIController : MonoBehaviour
     }
     public void MenuOnClick(){
         Debug.Log("Se llamará a la pantalla de menú");
+        SceneManager.LoadScene("Menu");
     }
     public void PlusLifeOnClic(){
         GameManager.instance.UpgradeTowerLife();
