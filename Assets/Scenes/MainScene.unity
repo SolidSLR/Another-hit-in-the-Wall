@@ -2414,6 +2414,7 @@ MonoBehaviour:
   plusADButton: {fileID: 205740214}
   plusArrowButton: {fileID: 618902705}
   spawnWalls: {fileID: 1789541796}
+  maxWalls: 0
 --- !u!1 &881976654
 GameObject:
   m_ObjectHideFlags: 0
@@ -3092,7 +3093,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 842671242}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: PauseOnClick
+        m_MethodName: MenuOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
