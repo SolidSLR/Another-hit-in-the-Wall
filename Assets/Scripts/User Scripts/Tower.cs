@@ -35,7 +35,7 @@ public class Tower : MonoBehaviour
         while(true){
             yield return new WaitForSeconds(0.3f);
             GameObject newArrow = Instantiate(arrow, arrowSpawn.position, Quaternion.identity);
-            newArrow.GetComponent<Rigidbody2D>().AddForce(Vector2.right * Random.Range(0.001f, 0.15f), ForceMode2D.Impulse);
+            newArrow.GetComponent<Rigidbody2D>().AddForce(Vector2.right * Random.Range(0.0001f, 0.1f), ForceMode2D.Impulse);
         }
     }
 }

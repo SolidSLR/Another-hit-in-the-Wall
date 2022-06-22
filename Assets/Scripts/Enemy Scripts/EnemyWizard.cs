@@ -18,6 +18,10 @@ public class EnemyWizard : EnemyBase
     void Update()
     {
         transform.position += Vector3.left * speed * Time.deltaTime;
+        if(life<=0){
+            GameManager.instance.enemiesOnScreen.Remove(gameObject);
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other){
