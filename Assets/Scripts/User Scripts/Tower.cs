@@ -33,9 +33,9 @@ public class Tower : MonoBehaviour
     public IEnumerator SpawnShot(){
         // Código temporal para pruebas
         while(true){
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.3f);
             GameObject newArrow = Instantiate(arrow, arrowSpawn.position, Quaternion.identity);
-            newArrow.GetComponent<Rigidbody2D>().AddForce(Vector2.right * Random.Range(0.2f, 15f), ForceMode2D.Impulse);
+            newArrow.GetComponent<Rigidbody2D>().AddForce(Vector2.right * Random.Range(0.001f, 0.15f), ForceMode2D.Impulse);
         }
     }
 }

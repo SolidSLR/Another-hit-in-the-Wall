@@ -12,5 +12,10 @@ public class Wall : MonoBehaviour
        if(life<=0){
             Destroy(this.gameObject);
        } 
+
+       if(GameManager.instance.enemiesOnScreen.Count==0){
+            UIController.instance.maxWalls = 0;
+            Destroy(this.gameObject);
+        }
     }
 }

@@ -12,7 +12,11 @@ public class UIController : MonoBehaviour
     public GameObject plusADButton;
     public GameObject plusArrowButton;
     public GameObject spawnWalls;
-    private int maxWalls = 0;
+    public static UIController instance;
+    public int maxWalls = 0;
+    void Awake(){
+        instance=this;
+    }
     void Start(){
         pauseUI.SetActive(true);
         resumeUI.SetActive(false);

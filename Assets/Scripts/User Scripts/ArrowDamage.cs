@@ -26,7 +26,7 @@ public class ArrowDamage : MonoBehaviour
         if(other.gameObject.CompareTag("Enemy")){
             Debug.Log("Se restarán "+damage+" puntos de vida al enemigo");
             other.gameObject.GetComponent<EnemyBase>().life -= damage;
-            //Destroy(arrow.gameObject);
+            Destroy(arrow.gameObject);
         }
         if(other.gameObject.CompareTag("Ground")){
             Destroy(arrow.gameObject);

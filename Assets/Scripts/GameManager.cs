@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         if(Tower.instance.actualLife == 0){
             Debug.Log("Torre KO: "+Tower.instance.actualLife);
             Time.timeScale = 0;
-            // Lanzar GameOver
+            GameOver();
         }
         Debug.Log("Valor actual de canSpawn: "+canSpawn+" Cantidad de enemigos en pantalla: "+enemiesOnScreen.Count);
     }
